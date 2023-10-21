@@ -1,0 +1,99 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap");
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --main-color: #087f5b;
+  --main-color-tint: #099268;
+  --grey-color: #343a40;
+  --grey-color-tint: #495057;
+  --grey-color-tint-light: #868396;
+  --white-color: #c3fae8;
+  --white-color-tint: #e6fcf5;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  color: var(--grey-color);
+  line-height: 1;
+}
+
+.accordion {
+  width: 700px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  margin: 100px auto;
+}
+
+.item {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  align-items: center;
+  column-gap: 24px;
+  row-gap: 32px;
+  padding: 24px;
+  border-top: 4px solid rgba(0, 0, 0, 0);
+  border-bottom: 4px solid rgba(0, 0, 0, 0);
+  box-shadow: 0 0 32px rgba(0, 0, 0, 0.1);
+}
+
+.number,
+.text {
+  font-size: 24px;
+  font-weight: 500;
+}
+
+.number {
+  color: var(--grey-color-tint-light);
+}
+
+.icon {
+  width: 24px;
+  height: 24px;
+}
+
+.icon:hover {
+  cursor: pointer;
+}
+
+.hidden-box {
+  display: none;
+  grid-column: 2 / 3;
+}
+
+.hidden-box p {
+  margin-bottom: 24px;
+  line-height: 1.6;
+}
+
+.hidden-box ul {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-left: 20px;
+  color: var(--grey-color-tint-light);
+}
+
+/* OPEN STATE */
+.open {
+  border-top: 4px solid var(--main-color);
+  transition: all 0.5s ease-out;
+}
+
+.open .hidden-box {
+  display: block;
+}
+
+.open .number,
+.open .text {
+  color: var(--main-color);
+}
+
+.open .icon {
+  transform: rotateX(180deg);
+}
