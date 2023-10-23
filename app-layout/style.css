@@ -1,0 +1,90 @@
+@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@700&display=swap");
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --grey-color: #343a40;
+  --grey-color-tint: #e9ecef;
+  --violet-color: #7048e8;
+  --violet-color-darker: #5f3dc4;
+  --white-color: #c3fae8;
+  --pink-color: #d6336c;
+  --cyan-color: #1098ad;
+}
+
+body {
+  height: 100vh;
+  display: grid;
+  grid-template-columns: 80px 400px 1fr 250px;
+  grid-template-rows: 80px 1fr;
+
+  font-family: "Rubik", sans-serif;
+  color: var(--grey-color);
+  font-size: 24px;
+  font-weight: 700;
+  text-align: center;
+}
+
+nav,
+section,
+main,
+aside {
+  padding-top: 24px;
+}
+
+nav {
+  grid-row: 1 / -1;
+  background-color: var(--grey-color);
+  color: var(--white-color);
+}
+
+menu {
+  grid-column: 2 / -1;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 0 40px;
+  background-color: var(--violet-color);
+}
+
+button {
+  display: inline-block;
+  padding: 8px 12px;
+  border: none;
+  background-color: var(--violet-color-darker);
+  color: var(--white-color);
+  font-size: 16px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+button:last-child {
+  margin-left: auto;
+  background-color: var(--pink-color);
+}
+
+section {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  padding: 40px;
+  background-color: var(--grey-color-tint);
+  overflow: scroll;
+}
+
+.email {
+  height: 96px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0;
+  background-color: var(--cyan-color);
+}
+
+aside {
+  background-color: var(--grey-color-tint);
+}
