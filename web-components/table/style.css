@@ -1,0 +1,53 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap");
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --main-color: #087f5b;
+  --grey-color: #343a40;
+  --grey-color-tint: #f8f9fa;
+  --grey-color-tint-light: #e9ecef;
+}
+
+body {
+  height: 100vh;
+  display: grid;
+  place-items: center;
+  font-family: "Inter", sans-serif;
+  color: var(--grey-color);
+  line-height: 1;
+}
+
+table {
+  width: 800px;
+  margin: 0 auto;
+  border-collapse: collapse;
+  font-size: 18px;
+}
+
+th,
+td {
+  padding: 16px 24px;
+  text-align: left;
+}
+
+thead tr {
+  background-color: var(--main-color);
+  color: #fff;
+}
+
+thead th {
+  width: 25%;
+}
+
+tbody tr:nth-child(odd) {
+  background-color: var(--grey-color-tint);
+}
+
+tbody tr:nth-child(even) {
+  background-color: var(--grey-color-tint-light);
+}
