@@ -58,6 +58,7 @@ Default: 9px
   --grey-color: #555;
   --grey-darker-color: #333;
   --white-darker-color: #ddd;
+  --featured-color: #888;
 }
 
 body {
