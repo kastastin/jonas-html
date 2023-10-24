@@ -13,10 +13,10 @@ Default: 1
 --- 02 COLORS
 
 - Primary: #e67e22
-- Tints: 
-- Shades:
+- Tints: ##fdf2e9
+- Shades: ##cf711f
 - Accents:
-- Greys: #555
+- Greys: #555, #333
 
 --- 03 SHADOWS
 
@@ -29,6 +29,8 @@ Default: 1
 
 */
 
+@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;600;700&display=swap");
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -36,17 +38,121 @@ Default: 1
 }
 
 :root {
+  font-size: 62.5%;
+  --main-color: #e67e22;
+  --main-tint-color: #fdf2e9;
+  --main-shade-color: #cf711f;
   --grey-color: #555;
+  --grey-darker-color: #333;
 }
 
 body {
-  font-family: sans-serif;
+  font-family: "Rubik", sans-serif;
   color: var(--grey-color);
   font-weight: 400;
   line-height: 1;
 }
 
-.container {
-  width: 1200px;
+.section-hero {
+  padding: 9.6rem 0;
+  background-color: var(--main-tint-color);
+}
+
+.hero {
+  max-width: 130rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 9.6rem;
   margin: 0 auto;
+}
+
+.heading-primary {
+  margin-bottom: 3.2rem;
+  color: var(--grey-darker-color);
+  font-size: 5.2rem;
+  font-weight: 700;
+  line-height: 1.05;
+  letter-spacing: -0.5px;
+}
+
+.hero-description {
+  margin-bottom: 4.8rem;
+  font-size: 2rem;
+  line-height: 1.6;
+}
+
+.btn:link,
+.btn:visited {
+  display: inline-block;
+  padding: 1.6rem 3.2rem;
+  border-radius: 9px;
+  font-size: 2rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: background-color 0.3s;
+}
+
+.btn--full:link,
+.btn--full:visited {
+  background-color: var(--main-color);
+  color: #fff;
+}
+
+.btn--full:hover,
+.btn--full:active {
+  background-color: var(--main-shade-color);
+}
+
+.btn--outline:link,
+.btn--outline:visited {
+  background-color: #fff;
+  color: var(--grey-color);
+}
+
+.btn--outline:hover,
+.btn--outline:active {
+  background-color: var(--main-tint-color);
+  box-shadow: inset 0 0 0 3px #fff;
+}
+
+.hero-img {
+  width: 100%;
+}
+
+.mr-sm {
+  margin-right: 1.6rem !important;
+}
+
+.delivered-meals {
+  display: flex;
+  align-items: center;
+  gap: 1.6rem;
+  margin-top: 8rem;
+}
+
+.delivered-imgs {
+  display: flex;
+}
+
+.delivered-imgs img {
+  width: 4.8rem;
+  height: 4.8rem;
+  margin-right: -1.6rem;
+  border: 3px solid var(--main-tint-color);
+  border-radius: 50%;
+}
+
+.delivered-imgs img:last-child {
+  margin: 0;
+}
+
+.delivered-text {
+  font-size: 1.8rem;
+  font-weight: 600;
+}
+
+.delivered-text span {
+  color: var(--main-shade-color);
+  font-weight: 700;
 }
