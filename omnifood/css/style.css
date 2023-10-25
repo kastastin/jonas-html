@@ -437,7 +437,7 @@
 /* --- CTA SECTION --- */
 
 .section-cta {
-  padding: 9.6rem 0;
+  padding: 4.8rem 0 12.8rem 0;
 }
 
 .cta {
@@ -514,4 +514,79 @@
 .cta *:focus {
   outline: none;
   box-shadow: 0 0 0 0.8rem rgba(255, 255, 255, 0.5);
+}
+
+/* --- FOOTER --- */
+
+.footer {
+  padding: 12.8rem 0;
+  border-top: 2px solid var(--footer-divider-color);
+}
+
+.grid--footer {
+  grid-template-columns: 1.7fr 1.3fr 1fr 1fr 1fr;
+}
+
+.logo-col {
+  display: flex;
+  flex-direction: column;
+}
+
+.footer-logo {
+  display: block;
+  margin-bottom: 3.2rem;
+}
+
+.social-links {
+  display: flex;
+  gap: 2.4rem;
+  list-style-type: none;
+}
+
+.social-icon {
+  width: 2.4rem;
+  height: 2.4rem;
+}
+
+.copyright {
+  margin-top: auto;
+  color: var(--footer-link-color);
+  font-size: 1.4rem;
+  line-height: 1.6;
+}
+
+.footer-heading {
+  margin-bottom: 4rem;
+  font-size: 1.8rem;
+  font-weight: 500;
+}
+
+.contacts {
+  font-size: 1.6rem;
+  line-height: 1.6;
+  font-style: normal;
+}
+
+.address {
+  margin-bottom: 2.4rem;
+}
+
+.footer-nav {
+  display: flex;
+  flex-direction: column;
+  gap: 2.4rem;
+  list-style-type: none;
+}
+
+.footer-link:link,
+.footer-link:visited {
+  color: var(--footer-link-color);
+  font-size: 1.6rem;
+  text-decoration: none;
+  transition: all 0.3s;
+}
+
+.footer-link:hover,
+.footer-link:active {
+  color: var(--grey-color);
 }
