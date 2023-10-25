@@ -33,6 +33,7 @@ Subheading: 0.75px
 --- 04 BORDER RADIUS
 
 Default: 9px
+Medium: 11px
 
 --- 05 WHITESPACE
 
@@ -59,6 +60,9 @@ Default: 9px
   --grey-darker-color: #333;
   --white-darker-color: #ddd;
   --featured-color: #888;
+  --green-color: #51cf66;
+  --lime-color: #94d82d;
+  --yellow-color: #ffd43b;
 }
 
 body {
@@ -120,7 +124,7 @@ body {
 
 .heading-tertiary {
   margin-bottom: 3rem;
-  font-size: 3.6rem;
+  font-size: 3rem;
   line-height: 1.2;
 }
 
@@ -168,6 +172,36 @@ body {
   box-shadow: inset 0 0 0 3px #fff;
 }
 
+.link:link,
+.link:visited {
+  display: inline-block;
+  padding-bottom: 2px;
+  border-bottom: 1px solid currentColor;
+  color: var(--main-color);
+  text-decoration: none;
+  transition: all 0.3s;
+}
+
+.link:hover,
+.link:active {
+  border-bottom: 1px solid transparent;
+  color: var(--main-shade-color);
+}
+
+/* --- HELPER CLASSES --- */
+
 .mr-sm {
   margin-right: 1.6rem !important;
+}
+
+.mb-md {
+  margin-bottom: 4.8rem !important;
+}
+
+.text-center {
+  text-align: center;
+}
+
+strong {
+  font-weight: 500;
 }
