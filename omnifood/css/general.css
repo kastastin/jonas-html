@@ -56,6 +56,7 @@ Medium: 11px
 :root {
   font-size: 62.5%;
   overflow-x: hidden;
+  scroll-behavior: smooth;
   --main-color: #e67e22;
   --main-tint-color: #fdf2e9;
   --main-tint-darker-color: #fae5d3;
